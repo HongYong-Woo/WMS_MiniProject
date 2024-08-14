@@ -1,14 +1,18 @@
 package main.java.com.ssg;
 
-import main.java.com.ssg.library.Script;
+import java.sql.Connection;
+import main.java.com.ssg.controller.login.loginController;
+import main.java.com.ssg.enums.UserType;
 
 public class Main {
 
-  public static Script  script = new Script();
 
   public static void main(String[] args) {
-    script.printStartMenu();
-    System.out.println();
-;
+//    loginController programExecution = new loginController();
+//
+//    programExecution.start();
+
+    UserType userType =
+
   }
 }
