@@ -1,6 +1,10 @@
 package main.java.com.ssg.service.login;
 
+import main.java.com.ssg.dao.login.loginDao;
+
 public class loginService implements loginServiceInterface{
+
+  loginDao loginDao = new loginDao();
 
   @Override
   public void login() {
