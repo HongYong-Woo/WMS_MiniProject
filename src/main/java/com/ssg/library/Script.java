@@ -7,7 +7,7 @@ public class Script {
   StringBuilder sb =new StringBuilder();
   int index = 1;
 
-  public void printString() {
+  private void printString() {
     String str = sb.toString();
     System.out.print(str);
     sb.delete(0, sb.length());
@@ -18,22 +18,27 @@ public class Script {
     printString();
   }
 
+  public void printFaultInput() {
+    sb.append("잘못된 입력입니다.\n");
+    printString();
+  }
+
   /** 처음 실행시 뜨는 화면 */
   public void printStartMenu() {
-    sb.append("\t창고천국에 오신 것을 환영합니다!\n\n").
+    index =1;
+    sb.append("\t창고천국에 오신 것을 환영합니다!\n").
         append("============================================================================\n").
-    append("\t").append(index++).append(". 로그인\t").append(index++).append(". 출고관리\t").append(index++).append(". 고객센터\n").
+    append("\t").append(index++).append(". 로그인\t").append(index++).append(". 출고관리\t").append(index++).append(". 고객센터\t").
+        append(index++).append(". 종료\n").
         append("============================================================================\n");
     printString();
     printInputNumber();
-    /*System.out.println(
-        "============================================================================");
-    System.out.println("=".repeat(70));
-    System.out.printf("%40s", "창고천국에 오신 것을 환영합니다!");
+
+    /*System.out.printf("%40s", "창고천국에 오신 것을 환영합니다!");
     System.out.println();
-    System.out.println("1. 로그인  2. 출고 관리  3. 고객센터");
     System.out.println("============================================================================");
-    System.out.println(); // 메뉴와 입력 사이에 한 줄 추가하기
+    System.out.println("1. 로그인  2. 출고 관리  3. 고객센터 4. 종료");
+    System.out.println("============================================================================");
     System.out.print("번호를 입력해 주세요 :  ");*/
   }
 
@@ -41,7 +46,7 @@ public class Script {
   public void printLoginAllMenu() {
     index =1;
     sb.append("---로그인 전체 메뉴---\n").append("\t").append(index++).append(". 로그인\t").append(index++).append(". 아이디 찾기\t").
-        append(index++).append(". 비밀번호 찾기\t").append(index++).append(". 회원등록\n");
+        append(index++).append(". 비밀번호 찾기\t").append(index++).append(". 회원등록\n").append("\t").append(index++).append(". 이전화면\n");
     printString();
     printInputNumber();
   }
