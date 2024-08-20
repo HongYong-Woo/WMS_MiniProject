@@ -6,6 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import ssg.Main;
 import ssg.dto.Member;
 import ssg.enums.UserState;
 import ssg.enums.UserType;
@@ -143,6 +144,7 @@ public class MemberManagementDao extends AbstractDBIO2 {
       PreparedStatement ps = getConnection().prepareStatement(query);
       ps.executeUpdate();
       close(getConnection(),ps);
+
     } catch (SQLException e) {
       throw new RuntimeException(e);
     }
